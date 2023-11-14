@@ -34,10 +34,9 @@ export class App extends Component {
     }));
   };
 
-  onDeleteContact = e => {
-    const contactToDelete = e.target.id;
+  onDeleteContact = contactId => {
     this.setState(prev => ({
-      contacts: prev.contacts.filter(({ id }) => id !== contactToDelete),
+      contacts: prev.contacts.filter(({ id }) => id !== contactId),
     }));
   };
 
